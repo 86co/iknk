@@ -31,12 +31,12 @@ to_num = {
     'M': M,
     'S': S,
     'E': E,
-    'Fw': FW,
-    'Bw': BW,
-    'Rw': RW,
-    'Lw': LW,
-    'Uw': UW,
-    'Dw': DW,
+    'f': FW,
+    'b': BW,
+    'r': RW,
+    'l': LW,
+    'u': UW,
+    'd': DW,
     'x': X,
     'y': Y,
     'z': Z,
@@ -96,7 +96,7 @@ def handle_input():
             sign_list_input = input()
             sign_str_list = re.findall(r'[A-Zwxyz\'2]+',sign_list_input)
             for sign_str in sign_str_list:
-                sign1 = to_num[re.findall(r'[FFRLUDMSEwxyz]+',sign_str)[0]]
+                sign1 = to_num[re.findall(r'[FBRLUDMSEwxyz]+',sign_str)[0]]
                 sign2_str = re.findall(r'[\'2]',sign_str)[0] if re.findall(r'[\'2]',sign_str) else ' '
                 sign2 = to_num[sign2_str]
                 sign_list.append([sign1, sign2])
